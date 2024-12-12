@@ -10,6 +10,13 @@ export default defineConfig(() => {
     build: {
       sourcemap: false,
       sourcemapExcludeSources: true,
+      target: 'esnext',
+    },
+    resolve: {
+      alias: {
+        '@': '/src',
+        '@/public': '/public',
+      },
     },
     plugins: [
       react(),
@@ -21,6 +28,7 @@ export default defineConfig(() => {
       nodePolyfills(),
       tsconfigPaths(),
     ],
+    envDir: '.env',
     envPrefix: 'ENV_',
     server: {
       port: 3000,

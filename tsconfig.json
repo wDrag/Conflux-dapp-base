@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2023",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
@@ -27,6 +27,14 @@
       "@/public/*": ["public/*"]
     }
   },
-  "include": ["src", "vite.config.ts", "tailwind.config.ts", "public/cell"],
+  "include": [
+    "src",
+    "vite.config.ts",
+    "tailwind.config.ts",
+    "svgr.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/vite-env.d.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
